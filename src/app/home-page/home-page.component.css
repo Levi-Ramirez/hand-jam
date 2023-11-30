@@ -1,7 +1,7 @@
 .main {
     margin: 50px 30px;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
 }
 
 .keyboard {
@@ -9,25 +9,44 @@
     width: 100%;
     border-style: solid;
     border-width: 1px;
-
 }
 
 .key {
     width: 15%;
-    height: 200px;
+    height: fit-content;
     border-width: 1px;
     display: flex;
-    border-style:solid;
+    border-style: solid;
     flex-wrap: wrap;
-
+    align-items: center; 
 }
 
 .drum-img {
     min-width: 100%;
-    height: 50%;
-    border-width: 0 0 1px 0;
-    display: block;
+    height: 150px; 
+    /* border-width: 0 0 1px 0; */
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    text-align: center;
     margin: 0;
-    border-style:solid;
+    /* border-style: solid; */
 }
 
+.hand-img {
+    min-width: 100%;
+    height: 150px; 
+    border-width: 0 0 1px 0;
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    text-align: center;
+    margin: 0;
+    border-style: solid;
+}
+
+img {
+    max-width: 65px;
+    height: auto;
+    width: auto; 
+}
