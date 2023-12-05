@@ -16,8 +16,8 @@ export class HomePageComponent implements OnInit {
     this.gestureSound.set('Hand Pointing', "crash.mp3");
     this.gestureSound.set('Two Open Hands', "tom-1.mp3");
     this.gestureSound.set('Two Closed Hands', "tom-2.mp3");
-    this.gestureSound.set('Hand Pinching', "tom-3.mp3");
-    this.gestureSound.set('Two Hands Pointing', "tom-4.mp3");
+    this.gestureSound.set('Hand Open And Hand Closed', "tom-3.mp3");
+    this.gestureSound.set('Hand Pointing And Hand Closed', "tom-4.mp3");
   }
   //have a function for each one (kinda hard codded) and return a truth value for if its on or not
   openHand(): string{
@@ -50,14 +50,14 @@ export class HomePageComponent implements OnInit {
     }
     return 'Wheat'
   }
-  pinchingHand(): string{
-    if(this.gesture == 'Hand Pinching') {
+  pinchingHand(): string{ //instead of pinching, one hand open and one hand closed
+    if(this.gesture == 'Hand Open And Hand Closed') {
       return 'Yellow'
     }
     return 'Wheat'
   }
   twoPointingHand(): string{
-    if(this.gesture == 'Two Hands Pointing') {
+    if(this.gesture == 'Hand Pointing And Hand Closed') {
       return 'Yellow'
     }
     return 'Wheat'

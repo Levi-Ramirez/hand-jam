@@ -111,6 +111,10 @@ export class HandtrackerComponent implements OnInit {
             if (pinching > 1) this.detectedGesture = "Two Hands Pinching";
             else if(pinching == 1) this.detectedGesture = "Hand Pinching";
 
+            if (openhands == 1 && closedhands == 1) this.detectedGesture = "Hand Open And Hand Closed";
+            if (pointing == 1 && closedhands == 1) this.detectedGesture = "Hand Pointing And Hand Closed";
+
+
             if (openhands == 0 && closedhands == 0 && pointing == 0 && pinching == 0)
                 this.detectedGesture = "None";
 
