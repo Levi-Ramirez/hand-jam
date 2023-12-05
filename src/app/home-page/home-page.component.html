@@ -8,62 +8,62 @@
 
 </div>
 <div class="keyboard">
-    <div class="key" (click)="playSound('snare.mp3')">
+    <div class="key" (click)="playSound('snare.mp3')" [ngStyle]="{'background-color': openHand()}">
         <div class="drum-img" id="snare-img">
             <img src="../../assets/images/snare.png" alt="snare drum">
         </div>
          <div class="hand-img" id="snare-hand">
             <img src="../../assets/images/open-hand.jpeg" alt="snare drum">
          </div>
-     </div>
-     <div class="key" (click)="playSound('kick-bass.mp3')">
+    </div>
+    <div class="key" (click)="playSound('kick-bass.mp3')" [ngStyle]="{'background-color': closedHand()}">
         <div class="drum-img" id="kick-img">
             <img src="../../assets/images/kick.png" alt="kick drum">
         </div>
          <div class="hand-img" id="kick-hand">
             <img src="../../assets/images/closed-hand.jpeg" alt="kick drum">
          </div>
-     </div>
-     <div class="key" (click)="playSound('crash.mp3')">
+    </div>
+    <div class="key" (click)="playSound('crash.mp3')" [ngStyle]="{'background-color': pointingHand()}">
         <div class="drum-img" id="crash-img">
             <img src="../../assets/images/crash.png" alt="crash drum">
         </div>
          <div class="hand-img" id="crash-hand">
             <img src="../../assets/images/hand-pointing.jpeg" alt="crash drum">
          </div>
-     </div>
-     <div class="key" (click)="playSound('tom-1.mp3')">
+    </div>
+    <div class="key" (click)="playSound('tom-1.mp3')" [ngStyle]="{'background-color': twoOpenHand()}">
         <div class="drum-img" id="tom-1-img">
             <img src="../../assets/images/tom1.png" alt="tom1 drum">
         </div>
          <div class="hand-img" id="tom-1-hand">
             <img src="../../assets/images/two-open-hands.jpeg" alt="tom1 drum">
          </div>
-     </div>
-     <div class="key" (click)="playSound('tom-2.mp3')">
+    </div>
+    <div class="key" (click)="playSound('tom-2.mp3')" [ngStyle]="{'background-color': twoClosedHand()}">
         <div class="drum-img" id="tom-2-img">
             <img src="../../assets/images/tom2.png" alt="tom2 drum">
         </div>
          <div class="hand-img" id="tom-2-hand">
             <img src="../../assets/images/two-closed-hands.jpeg" alt="tom2 drum">
          </div>
-     </div>
-     <div class="key" (click)="playSound('tom-3.mp3')">
+    </div>
+    <div class="key" (click)="playSound('tom-3.mp3')" [ngStyle]="{'background-color': pinchingHand()}">
         <div class="drum-img" id="tom-3-img">
             <img src="../../assets/images/tom3.png" alt="tom3 drum">
         </div>
          <div class="hand-img" id="tom-3-hand">
             <img src="../../assets/images/hand-pinching.jpeg" alt="tom3 drum">
          </div>
-     </div>
-     <div class="key" (click)="playSound('tom-4.mp3')">
+    </div>
+    <div class="key" (click)="playSound('tom-4.mp3')" [ngStyle]="{'background-color': twoPointingHand()}">
         <div class="drum-img" id="tom-4-img">
             <img src="../../assets/images/tom4.png" alt="tom4 drum">
         </div>
          <div class="hand-img" id="tom-4-hand">
             <img src="../../assets/images/two-hands-pointing.avif" alt="tom4 drum">
          </div>
-     </div>
+    </div>
 </div>
 
 
