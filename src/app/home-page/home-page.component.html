@@ -1,12 +1,10 @@
 <div class="main">
 
     <app-handtracker (onPrediction)="prediction($event)"></app-handtracker>
-    <div [innerHTML]="gesture"></div>
-    <h1>Hand Jam</h1>
-
-
-
+    <h1 class="nice-text">Hand Jam</h1>
 </div>
+<h2 class="text-center nice-text" [innerHTML]="gesture"></h2>
+
 <div class="keyboard">
     <div class="key" (click)="playSound('snare.mp3')" [ngStyle]="{'background-color': openHand()}">
         <div class="drum-img" id="snare-img">
@@ -65,5 +63,3 @@
          </div>
     </div>
 </div>
-
-

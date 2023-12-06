@@ -21,6 +21,18 @@
     align-items: center; 
 }
 
+.text-center {
+    text-align: center;
+}
+.nice-text {
+    font-family: Arial, Helvetica, sans-serif;
+    color: white
+}
+
+body {
+    background-color: #121212;
+}
+
 .drum-img {
     min-width: 100%;
     height: 150px; 

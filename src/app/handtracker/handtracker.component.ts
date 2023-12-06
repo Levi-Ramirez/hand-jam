@@ -21,6 +21,7 @@ export class HandtrackerComponent implements OnInit {
   detectedGesture:string = "None"
   width:string = "400"
   height:string = "400"
+  alreadyStarted:boolean = false
 
   private model: any = null;
   private runInterval: any = null;
@@ -54,22 +55,34 @@ export class HandtrackerComponent implements OnInit {
   }
 
   startDetection(){
-    this.startVideo().then(()=>{
-        //The default size set in the library is 20px. Change here or use styling
-        //to hide if video is not desired in UI.
-        this.video.nativeElement.style.height = "200px"
+    if(!this.alreadyStarted) {
+      this.startVideo().then(()=>{
+          //The default size set in the library is 20px. Change here or use styling
+          //to hide if video is not desired in UI.
+          this.video.nativeElement.style.height = "200px"
 
-        console.log("starting predictions");
-        this.runInterval = setInterval(()=>{
-            this.runDetection();
-        }, this.SAMPLERATE);
-    }, (err: any) => { console.log(err); });
+          console.log("starting predictions");
+          this.runInterval = setInterval(()=>{
+              this.runDetection();
+          }, this.SAMPLERATE);
+      }, (err: any) => { console.log(err); });
+      this.alreadyStarted = true;
+    }
+    else {
+      console.log("Already running");
+    }
   }
 
   stopDetection(){
-    console.log("stopping predictions");
-    clearInterval(this.runInterval);
-    handTrack.stopVideo(this.video.nativeElement);
+    if(this.alreadyStarted) {
+      console.log("stopping predictions");
+      clearInterval(this.runInterval);
+      handTrack.stopVideo(this.video.nativeElement);
+      this.alreadyStarted = false;
+    }
+    else {
+      console.log("Not running");
+    }
   }
 
   /*

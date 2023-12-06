@@ -7,7 +7,7 @@ import { PredictionEvent } from '../prediction-event';
   styleUrls: ['./home-page.component.css']
 })
 export class HomePageComponent implements OnInit {
-  gesture: string = "";
+  gesture: string = "(press start above)";
     gestureSound: Map<string, string> = new Map(); // Initialize as a new Map and fix typo
 
   constructor() { 
