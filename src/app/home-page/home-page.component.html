@@ -1,7 +1,12 @@
 <div class="main">
 
     <app-handtracker (onPrediction)="prediction($event)"></app-handtracker>
-    <h1 class="nice-text">Hand Jam</h1>
+    <div>
+        <h1 class="nice-text border-text">Hand Jam</h1>
+        <p class="nice-text border-text">Press start to open your camera, then open/close/point your hands to play the instruments.</p>
+        <p class="nice-text border-text">This is best done with a plain background.</p>
+
+    </div>
 </div>
 <h2 class="text-center nice-text" [innerHTML]="gesture"></h2>
 
@@ -11,7 +16,7 @@
             <img src="../../assets/images/snare.png" alt="snare drum">
         </div>
          <div class="hand-img" id="snare-hand">
-            <img src="../../assets/images/open-hand.jpeg" alt="snare drum">
+            <img src="../../assets/images/handOpen.jpg" alt="snare drum">
          </div>
     </div>
     <div class="key" (click)="playSound('kick-bass.mp3')" [ngStyle]="{'background-color': closedHand()}">
@@ -19,7 +24,7 @@
             <img src="../../assets/images/kick.png" alt="kick drum">
         </div>
          <div class="hand-img" id="kick-hand">
-            <img src="../../assets/images/closed-hand.jpeg" alt="kick drum">
+            <img src="../../assets/images/handClosed.jpg" alt="kick drum">
          </div>
     </div>
     <div class="key" (click)="playSound('crash.mp3')" [ngStyle]="{'background-color': pointingHand()}">
@@ -27,7 +32,7 @@
             <img src="../../assets/images/crash.png" alt="crash drum">
         </div>
          <div class="hand-img" id="crash-hand">
-            <img src="../../assets/images/hand-pointing.jpeg" alt="crash drum">
+            <img src="../../assets/images/handPointing.jpg" alt="crash drum">
          </div>
     </div>
     <div class="key" (click)="playSound('tom-1.mp3')" [ngStyle]="{'background-color': twoOpenHand()}">
@@ -35,7 +40,7 @@
             <img src="../../assets/images/tom1.png" alt="tom1 drum">
         </div>
          <div class="hand-img" id="tom-1-hand">
-            <img src="../../assets/images/two-open-hands.jpeg" alt="tom1 drum">
+            <img src="../../assets/images/twoHandOpen.jpg" alt="tom1 drum">
          </div>
     </div>
     <div class="key" (click)="playSound('tom-2.mp3')" [ngStyle]="{'background-color': twoClosedHand()}">
@@ -43,7 +48,7 @@
             <img src="../../assets/images/tom2.png" alt="tom2 drum">
         </div>
          <div class="hand-img" id="tom-2-hand">
-            <img src="../../assets/images/two-closed-hands.jpeg" alt="tom2 drum">
+            <img src="../../assets/images/twoHandsClosed.jpg" alt="tom2 drum">
          </div>
     </div>
     <div class="key" (click)="playSound('tom-3.mp3')" [ngStyle]="{'background-color': pinchingHand()}">
@@ -51,7 +56,7 @@
             <img src="../../assets/images/tom3.png" alt="tom3 drum">
         </div>
          <div class="hand-img" id="tom-3-hand">
-            <img src="../../assets/images/hand-pinching.jpeg" alt="tom3 drum">
+            <img src="../../assets/images/handOpenHandClosed.jpg" alt="tom3 drum">
          </div>
     </div>
     <div class="key" (click)="playSound('tom-4.mp3')" [ngStyle]="{'background-color': twoPointingHand()}">
@@ -59,7 +64,7 @@
             <img src="../../assets/images/tom4.png" alt="tom4 drum">
         </div>
          <div class="hand-img" id="tom-4-hand">
-            <img src="../../assets/images/two-hands-pointing.avif" alt="tom4 drum">
+            <img src="../../assets/images/handClosedHandPointing.jpg" alt="tom4 drum">
          </div>
     </div>
 </div>
