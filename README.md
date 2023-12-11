@@ -1,4 +1,4 @@
---Readme document for *author(s)*, *email(s)*, *UCI id(s)*--
+--Readme document for *Levi Ramirez and Mehmet Nadi*, *leviar@uci.edu and mnadi@uci.edu*, *81289700 and 56102231*--
 
 1. How many assignment points do you believe you completed (replace the *'s with your numbers)?
 
